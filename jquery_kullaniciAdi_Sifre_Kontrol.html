@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uygulama</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script src="jquery-3.3.1.min"></script>
+</head>
+<script>
+	
+	$(document).ready(function(){
+		$(".dogru_Mesaj").hide();
+		$(".yanlis_Mesaj").hide();
+		$("#kayit").click(function(){
+			var kullaniciAdi= $("#kullanici_Adi").val();
+			var sifre= $("#Sifre").val();
+			//$(".temizle").empty();
+			if(kullaniciAdi == "mrtdmr" && sifre=="123456"){
+				$(".dogru_Mesaj").show();
+				$(".yanlis_Mesaj").hide();
+			}
+			else{
+
+				$(".yanlis_Mesaj").show();
+				$(".dogru_Mesaj").hide();
+			}
+		})
+
+	})
+</script>
+
+
+<body>
+
+
+<br />
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<input type="text" name="text" id="kullanici_Adi" placeholder="Kullanıcı Adı.."/>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-md-3">
+			<input type="text" name="text" id="Sifre" placeholder="Şifre.."/>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-md-3">
+			<button class="btn btn-success" id="kayit">Kaydol</button>
+		</div>
+	</div>
+	<br />
+	<div class="row temizle">
+		<div class="alert alert-success dogru_Mesaj">
+  			<strong>Başarılı!</strong> Tebrikler <a href="#" class="alert-link">Giriş Yaptınız..</a>.
+		</div>
+		<div class="alert alert-danger yanlis_Mesaj">
+  			<strong>Hatalı!</strong> Yanlış <a href="#" class="alert-link">Kullanıcı Adı veya Şifre Yanlış</a>.
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
